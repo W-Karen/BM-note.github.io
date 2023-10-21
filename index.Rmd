@@ -6,11 +6,12 @@ output:
     toc_float: true
     collapsed: true
     code_folding: hide
+    number_sections: true
 ---
 
 # Module 1 Introduction
 
-## Statistics & Biostatistics
+## Statistics & Biostatistics {.tabset}
 
 ### Some Definitions (总体、样本、参数、统计量、变量)
 
@@ -114,7 +115,7 @@ Types of observational studies:
 
 ![](Cohort Study.jpg)
 
-## R code -- Data Maniplulation
+## R code -- Data Maniplulation {.tabset}
 
 ### Importing Data 读取数据
 
@@ -229,7 +230,7 @@ write.csv(birth_final, file = "Module 1/birth_final.csv")
 
 # Module 2 Descriptive Statistics 描述性统计
 
-## Measures of Location = central tendency 
+## Measures of Location = central tendency {.tabset}
 
 ### Mean (average)平均数
 
@@ -283,10 +284,15 @@ Discretize the data (intervals, histograms). 数据离散化（区间、直方�
 
 ### Understanding of location measures
 
-* How do we define the “center” (location)?
-  * Some point having the smallest dispersion (distance) to the sample points (in sum or average).
+* How do we define the “center” (location)? 
+  * Some point having the smallest dispersion (distance) to the sample points (in sum or average). 
+  
 * How do we define distance or dispersion?
   * A common choice: (𝑥! −𝑎) " as the distance between 𝑥! and 𝑎.
+
+* How do we define distance or dispersion?
+  * 
+
 
 # Module 3
 

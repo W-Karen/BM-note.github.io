@@ -364,13 +364,17 @@ div.tocify {
 </div>
 
 
-<div id="module-1-introduction" class="section level1">
-<h1>Module 1 Introduction</h1>
-<div id="statistics-biostatistics" class="section level2">
-<h2>Statistics &amp; Biostatistics</h2>
-<div id="some-definitions-总体样本参数统计量变量"
-class="section level3">
-<h3>Some Definitions (总体、样本、参数、统计量、变量)</h3>
+<div id="module-1-introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Module 1
+Introduction</h1>
+<div id="statistics-biostatistics" class="section level2 tabset"
+number="1.1">
+<h2 class="tabset"><span class="header-section-number">1.1</span>
+Statistics &amp; Biostatistics</h2>
+<div id="some-definitions-总体样本参数统计量变量" class="section level3"
+number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Some Definitions
+(总体、样本、参数、统计量、变量)</h3>
 <ul>
 <li><p><code>Population</code>: the complete collection of units
 (individuals or objects) of interest in a study.</p></li>
@@ -389,8 +393,9 @@ Estimator)</p></li>
 population or sample</li>
 </ul>
 </div>
-<div id="sampling-抽样" class="section level3">
-<h3>Sampling (抽样)</h3>
+<div id="sampling-抽样" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Sampling
+(抽样)</h3>
 <p><img src="Sampling%20Scheme.jpg" /></p>
 <p>Statistical inference allows generalization from the sample only to
 the population from which the sample came from (assuming no sampling and
@@ -415,8 +420,10 @@ critically on how we sample populations.</li>
 samples</p></li>
 </ul>
 </div>
-<div id="types-of-structured-data" class="section level3">
-<h3>Types of (structured) Data</h3>
+<div id="types-of-structured-data" class="section level3"
+number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Types of
+(structured) Data</h3>
 <ul>
 <li><p><code>Qualitative data</code>: measurements expressed not in
 terms of numbers but in types or categories.</p></li>
@@ -440,8 +447,9 @@ values e.g., # of pregnancies</p>
 <p><code>Continuous variable</code>s: have a set of all possible values
 within an interval. e.g., body mass index (BMI)</p>
 </div>
-<div id="sources-of-data" class="section level3">
-<h3>Sources of Data</h3>
+<div id="sources-of-data" class="section level3" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Sources of
+Data</h3>
 <ul>
 <li><p><code>Published Source</code>: government, business, sports
 statistics are collected and presented in press, online, etc.</p></li>
@@ -454,8 +462,8 @@ on the attributesor measurements of interest, without influencing the
 events</p></li>
 </ul>
 </div>
-<div id="study-design" class="section level3">
-<h3>Study Design</h3>
+<div id="study-design" class="section level3" number="1.1.5">
+<h3><span class="header-section-number">1.1.5</span> Study Design</h3>
 <ul>
 <li>Experimental</li>
 </ul>
@@ -477,10 +485,13 @@ expensive, feasible)</p>
 <p><img src="Cohort%20Study.jpg" /></p>
 </div>
 </div>
-<div id="r-code-data-maniplulation" class="section level2">
-<h2>R code – Data Maniplulation</h2>
-<div id="importing-data-读取数据" class="section level3">
-<h3>Importing Data 读取数据</h3>
+<div id="r-code-data-maniplulation" class="section level2 tabset"
+number="1.2">
+<h2 class="tabset"><span class="header-section-number">1.2</span> R code
+– Data Maniplulation</h2>
+<div id="importing-data-读取数据" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Importing Data
+读取数据</h3>
 <p>Here we read csv files <code>lowbwt_Low.csv</code> and
 <code>lowbwt_Normal.csv</code></p>
 <p>You will need to change the working directory to your personal file
@@ -489,8 +500,10 @@ location.</p>
 low_birth = read.csv(&quot;Module 1/lowbwt_Low.csv&quot;)
 norm_birth = read.csv(&quot;Module 1/lowbwt_Normal.csv&quot;)</code></pre>
 </div>
-<div id="examine-data-attributes-检查数据属性" class="section level3">
-<h3>Examine Data Attributes 检查数据属性</h3>
+<div id="examine-data-attributes-检查数据属性" class="section level3"
+number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Examine Data
+Attributes 检查数据属性</h3>
 <pre class="r"><code># Variable names 列变量名称
 names(low_birth)    </code></pre>
 <pre><code>## [1] &quot;id&quot;    &quot;smoke&quot; &quot;age&quot;</code></pre>
@@ -536,8 +549,9 @@ table(low_birth$smoke)</code></pre>
 ## 29 30</code></pre>
 </div>
 <div id="data-manipulation-using-dplyr-用dply进行数据模拟"
-class="section level3">
-<h3>Data Manipulation using <code>dplyr</code> 用“dply”进行数据模拟</h3>
+class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Data Manipulation
+using <code>dplyr</code> 用“dply”进行数据模拟</h3>
 <p>Note: to apply these changes to the existing data, you must reassign
 the change.</p>
 <p>i.e. <code>low_birth = filter(low_birth, age &lt; 20)</code></p>
@@ -1139,8 +1153,10 @@ mutate(low_birth, new_age = case_when(age &lt; 25 ~ 1,
 ## 58 10     0  29       2
 ## 59 22     1  32       3</code></pre>
 </div>
-<div id="combine-data-sets-合并数据集" class="section level3">
-<h3>Combine Data Sets 合并数据集</h3>
+<div id="combine-data-sets-合并数据集" class="section level3"
+number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Combine Data Sets
+合并数据集</h3>
 <pre class="r"><code># stack low_birth &amp; norm_birth 
 low_and_norm = rbind(low_birth, norm_birth)
 
@@ -1154,12 +1170,16 @@ write.csv(birth_final, file = &quot;Module 1/birth_final.csv&quot;)</code></pre>
 </div>
 </div>
 <div id="module-2-descriptive-statistics-描述性统计"
-class="section level1">
-<h1>Module 2 Descriptive Statistics 描述性统计</h1>
-<div id="measures-of-location-central-tendency" class="section level2">
-<h2>Measures of Location = central tendency</h2>
-<div id="mean-average平均数" class="section level3">
-<h3>Mean (average)平均数</h3>
+class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Module 2 Descriptive
+Statistics 描述性统计</h1>
+<div id="measures-of-location-central-tendency"
+class="section level2 tabset" number="2.1">
+<h2 class="tabset"><span class="header-section-number">2.1</span>
+Measures of Location = central tendency</h2>
+<div id="mean-average平均数" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Mean
+(average)平均数</h3>
 <p><code>Definition</code>: the arithmetic mean represents the sum of
 all observations divided by the total number of observations</p>
 <p><img src="mean.jpg" /></p>
@@ -1180,8 +1200,10 @@ value of the mean.</li>
 </ul></li>
 </ul>
 </div>
-<div id="median-the-50-th-percentile-中位数" class="section level3">
-<h3>Median (the 50 th percentile) 中位数</h3>
+<div id="median-the-50-th-percentile-中位数" class="section level3"
+number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Median (the 50 th
+percentile) 中位数</h3>
 <p>Definition: The sample median is computed as:</p>
 <ol style="list-style-type: decimal">
 <li><p>If n is odd, median is computed as [(n+1)/2]<sup>th</sup> largest
@@ -1196,8 +1218,9 @@ in the data set including outliers.</p></li>
 data.</p></li>
 </ul>
 </div>
-<div id="percentiles-百分位数" class="section level3">
-<h3>Percentiles 百分位数</h3>
+<div id="percentiles-百分位数" class="section level3" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Percentiles
+百分位数</h3>
 <p>Defination: In general the k<sup>th</sup> percentile is a value such
 that most k% of the data are smaller than it and (100-k)% are larger
 than it.</p>
@@ -1209,8 +1232,8 @@ than it.</p>
 …</p></li>
 </ul>
 </div>
-<div id="mode-众数" class="section level3">
-<h3>Mode 众数</h3>
+<div id="mode-众数" class="section level3" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Mode 众数</h3>
 <p>Definition: the most frequently occurring value in the data</p>
 <p>It becomes problematic for large number of possible values with
 infrequent occurrence (continuous variables).</p>
@@ -1220,8 +1243,10 @@ infrequent occurrence (continuous variables).</p>
 <p>Discretize the data (intervals, histograms).
 数据离散化（区间、直方图）</p>
 </div>
-<div id="understanding-of-location-measures" class="section level3">
-<h3>Understanding of location measures</h3>
+<div id="understanding-of-location-measures" class="section level3"
+number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> Understanding of
+location measures</h3>
 <ul>
 <li>How do we define the “center” (location)?
 <ul>
@@ -1232,39 +1257,43 @@ points (in sum or average).</li>
 <ul>
 <li>A common choice: (𝑥! −𝑎) ” as the distance between 𝑥! and 𝑎.</li>
 </ul></li>
+<li>How do we define distance or dispersion?
+<ul>
+<li></li>
+</ul></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="module-3" class="section level1">
-<h1>Module 3</h1>
+<div id="module-3" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Module 3</h1>
 </div>
-<div id="module-4" class="section level1">
-<h1>Module 4</h1>
+<div id="module-4" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Module 4</h1>
 </div>
-<div id="module-5" class="section level1">
-<h1>Module 5</h1>
+<div id="module-5" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Module 5</h1>
 </div>
-<div id="module-6" class="section level1">
-<h1>Module 6</h1>
+<div id="module-6" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Module 6</h1>
 </div>
-<div id="module-7" class="section level1">
-<h1>Module 7</h1>
+<div id="module-7" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Module 7</h1>
 </div>
-<div id="module-8" class="section level1">
-<h1>Module 8</h1>
+<div id="module-8" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Module 8</h1>
 </div>
-<div id="module-9" class="section level1">
-<h1>Module 9</h1>
+<div id="module-9" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Module 9</h1>
 </div>
-<div id="module-10" class="section level1">
-<h1>Module 10</h1>
+<div id="module-10" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Module 10</h1>
 </div>
-<div id="module-11" class="section level1">
-<h1>Module 11</h1>
+<div id="module-11" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> Module 11</h1>
 </div>
-<div id="module-12" class="section level1">
-<h1>Module 12</h1>
+<div id="module-12" class="section level1" number="12">
+<h1><span class="header-section-number">12</span> Module 12</h1>
 </div>
 
 
