@@ -231,14 +231,63 @@ write.csv(birth_final, file = "Module 1/birth_final.csv")
 
 ## Measures of Location = central tendency 
 
-### Mean (average)
+### Mean (average)平均数
 
 `Definition`: the arithmetic mean represents the sum of all observations divided by the total number of observations
 
+![](Mean.jpg)
 
-### Median (the 50 th percentile)
+* The most common used measure of location
 
-### Mode
+* Overly sensitive to outliers (unusual observations).
+
+* Not appropriate for nominal or categorical variables (how to characterize their mean?)
+
+Convert to binary variables: calculate the frequencies / proportions of blood types A, B and O (the mean of appearance of each type).
+
+* Why “mean” is a good measure of the location / center?
+
+  *  It is the measure that includes all the values in the data set for its calculation, and any change in any of the scores will affect the value of the mean.
+
+### Median (the 50 th percentile) 中位数
+
+Definition: The sample median is computed as:
+
+1. If n is odd, median is computed as [(n+1)/2]^th^ largest item in the sample
+
+2. If n is even, computed as the <u>average</u> of (n/2) and [(n/2)+1]^th^ largest items
+
+* Compared to the mean, the median is not affected by every value in the data set including outliers.
+
+* Median is usually an appropriate measure for ordinal data.
+
+### Percentiles 百分位数
+
+Defination: In general the k^th^ percentile is a value such that most k% of the data are smaller than it and (100-k)% are larger than it.
+
+* Median is the 50^th^ percentile
+
+* Quartiles: 25^th^ (Q1), 50^th^ , 75^th^ (Q3)
+
+* Deciles: 10^th^ , 20^th^ , 30^th^ , ...
+
+### Mode 众数
+
+Definition: the most frequently occurring value in the data
+
+It becomes problematic for large number of possible values with infrequent occurrence (continuous variables).
+
+* How to fix this problem?
+
+Discretize the data (intervals, histograms). 数据离散化（区间、直方图）
+
+### Understanding of location measures
+
+* How do we define the “center” (location)?
+  * Some point having the smallest dispersion (distance) to the sample points (in sum or average).
+* How do we define distance or dispersion?
+  * A common choice: (𝑥! −𝑎) " as the distance between 𝑥! and 𝑎.
+
 # Module 3
 
 
