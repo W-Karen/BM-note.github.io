@@ -364,9 +364,8 @@ div.tocify {
 </div>
 
 
-<div id="module-1-introduction" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Module 1
-Introduction</h1>
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
 <div id="statistics-biostatistics" class="section level2 tabset"
 number="1.1">
 <h2 class="tabset"><span class="header-section-number">1.1</span>
@@ -1169,10 +1168,10 @@ write.csv(birth_final, file = &quot;Module 1/birth_final.csv&quot;)</code></pre>
 </div>
 </div>
 </div>
-<div id="module-2-descriptive-statistics-描述性统计"
-class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Module 2 Descriptive
-Statistics 描述性统计</h1>
+<div id="descriptive-statistics-描述性统计" class="section level1"
+number="2">
+<h1><span class="header-section-number">2</span> Descriptive Statistics
+描述性统计</h1>
 <div id="measures-of-location-central-tendency"
 class="section level2 tabset" number="2.1">
 <h2 class="tabset"><span class="header-section-number">2.1</span>
@@ -1274,26 +1273,376 @@ points (in sum or average).</li>
 <div id="module-5" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Module 5</h1>
 </div>
-<div id="module-6" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Module 6</h1>
+<div id="sampling-distributions-抽样分布" class="section level1"
+number="6">
+<h1><span class="header-section-number">6</span> Sampling Distributions
+抽样分布</h1>
+<p><em>Law of Large Numbers</em> → justify the consistency of the sample
+means</p>
+<p><em>Central Limit Theorem</em> → calculate approximate probabilities
+for sample means</p>
+<div id="sampling-distributions" class="section level2 tabset"
+number="6.1">
+<h2 class="tabset"><span class="header-section-number">6.1</span>
+Sampling Distributions</h2>
+<div id="sampling-distributions-1" class="section level3"
+number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Sampling
+Distributions</h3>
+<p>The usual way to obtain information regarding a population parameter
+such as: 𝜇, 𝜎^2, or 𝑝, is by drawing a sample from a population and
+compute a statistics (sample characteristic).</p>
+<p><img src="sampling%20distribution.jpg" /></p>
+<p>The observed value/statistic depends on the particular sample
+selected, and it varies from sample to sample → <em>sampling
+variability</em></p>
+<p>The distribution of (the value of) the statistic is called the
+<em>sampling distribution</em></p>
+<ul>
+<li>The sampling distributions can be described by measures of central
+tendency and spread. This is informative in predicting how close a
+statistic falls to the population parameter it estimates (testing,
+confidence interval).</li>
+</ul>
 </div>
-<div id="module-7" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Module 7</h1>
+<div id="estimation-of-the-mean-of-a-distribution"
+class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Estimation of the
+Mean of a Distribution</h3>
 </div>
-<div id="module-8" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Module 8</h1>
 </div>
-<div id="module-9" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Module 9</h1>
+<div id="lln-大数定律" class="section level2 tabset" number="6.2">
+<h2 class="tabset"><span class="header-section-number">6.2</span> LLN
+大数定律</h2>
 </div>
-<div id="module-10" class="section level1" number="10">
-<h1><span class="header-section-number">10</span> Module 10</h1>
+<div id="clt-中心极限定理" class="section level2 tabset" number="6.3">
+<h2 class="tabset"><span class="header-section-number">6.3</span> CLT
+中心极限定理</h2>
 </div>
-<div id="module-11" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Module 11</h1>
+<div id="r-code" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> R Code</h2>
 </div>
-<div id="module-12" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Module 12</h1>
+</div>
+<div id="统计推断方法" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> 统计推断方法</h1>
+<p>置信区间→推断总体参数所在的范围 假设检验→推断总体参数之间是否不同</p>
+<div id="置信区间估计" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> 置信区间估计</h2>
+<p>置信区间（CI）：估计值±误差范围</p>
+<p>高置信度=结果准确性高</p>
+<p>误差范围= 结果精确性高</p>
+<p>减小误差范围m的方法：① 选择较低的置信度——减小z’ ② 选择更大的样本量n ③
+减小拉姆达</p>
+</div>
+<div id="假设检验" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> 假设检验</h2>
+<p>假设检验=反证法+小概率思想</p>
+<p>基本步骤：</p>
+<p>（一）建立假设检验，确定检验水准</p>
+<p>null hypothesis 零假设</p>
+<p>H0：两总体均数无差异</p>
+<p>备择假设</p>
+<p>H1：两总体均数有差异</p>
+<p>检验水准 α</p>
+<p>（二）统计量的选择与计算</p>
+<p>Z = （估计值-假设检验值）/估计值的标准误</p>
+<p>（三）计算P值，做出统计推断</p>
+<p>P值：在H0成立的条件下，计算现有样本统计量以及更极端情况的概率，称为假设检验的P值。</p>
+<p>统计推断结论：</p>
+<p>若P≤α，按照α水准拒绝H0，接受H1，可以认为总体参数之间的差异有统计学意义。
+若P≥α，按照α水准不拒绝H0，尚不能认为总体参数之间的差异有统计学意义。</p>
+</div>
+<div id="检验效能与基于决策的推断" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span>
+检验效能与基于决策的推断</h2>
+<p>检验效能（power of test)</p>
+<p>检验水准为α，当H1为真时，假设检验能够拒绝H0的概率</p>
+<p>一类错误：当H0为真时，拒绝H0 犯一类错误的概率=检验水准α
+二类错误：当H1为真时，拒绝H1 犯二类错误的概率=β，检验效能=1-β</p>
+</div>
+</div>
+<div id="methods-of-inference-one-sample-mean-推断方法单样本均数"
+class="section level1 tabset" number="8">
+<h1 class="tabset"><span class="header-section-number">8</span> Methods
+of Inference: One-Sample Mean 推断方法：单样本均数</h1>
+<div id="samping-distribution-抽样分布" class="section level2"
+number="8.1">
+<h2><span class="header-section-number">8.1</span> Samping distribution
+抽样分布</h2>
+<ul>
+<li><p>The observed value depends on the particular sample selected, and
+it varies from sample to sample -&gt; <em>sampling
+variability</em>.</p></li>
+<li><p>The distribution of the values of the statistic is called
+<em>sampling distribution</em>.</p></li>
+</ul>
+</div>
+<div id="statistical-inferences-统计推断" class="section level2 tabset"
+number="8.2">
+<h2 class="tabset"><span class="header-section-number">8.2</span>
+Statistical Inferences 统计推断</h2>
+<p>Statistical inferences include:</p>
+<div id="point-estimation" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Point
+Estimation</h3>
+<ul>
+<li><p>A point estimate is a single number computed from the sample,
+that can be regarded as a plausible value of the population parameter
+(characteristics).</p></li>
+<li><p>Because of sampling variability, rarely is the point estimate
+exactly equal to the true parameter.</p>
+<ul>
+<li>Solution: construct a confidence interval (CI) that contains
+plausible values for the population parameter.</li>
+</ul></li>
+</ul>
+</div>
+<div id="interval-estimation" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Interval
+Estimation</h3>
+<div id="总体标准差已知" class="section level4" number="8.2.2.1">
+<h4><span class="header-section-number">8.2.2.1</span>
+总体标准差已知</h4>
+<p><img src="one-sample%20mean.jpg" /></p>
+<p><img src="one-sample%20mean1.jpg" /></p>
+<p><img src="one-sample%20mean2.jpg" /></p>
+<p><img src="one-sample%20mean3.jpg" /></p>
+<ul>
+<li>95% CI: Interpretations</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Over the collection of all 95% confidence intervals that could be
+constructed from repeated samples of size n, 95% of them will contain
+the true population mean.</p></li>
+<li><p>在所有可以从大小为 n 的重复样本中构建的 95% 置信区间集合中，95%
+的置信区间将包含真实的总体平均值。</p></li>
+<li><p>We are 95% confident that the true population mean lies between
+the lower and the upper limits of the interval.</p></li>
+<li><p>我们有 95%
+的把握认为，真实的人口平均值位于区间的下限和上限之间。</p></li>
+</ol>
+</div>
+<div
+id="总体标准差未知do-not-know-the-true-𝜎-but-only-know-the-sample-standard-deviation"
+class="section level4" number="8.2.2.2">
+<h4><span class="header-section-number">8.2.2.2</span> 总体标准差未知do
+not know the true 𝜎 but only know the sample standard deviation?</h4>
+<p><img src="one-sample%20mean4.jpg" /></p>
+</div>
+<div id="two-vs-one-sided-confidence-intervals" class="section level4"
+number="8.2.2.3">
+<h4><span class="header-section-number">8.2.2.3</span> Two vs One-Sided
+Confidence Intervals</h4>
+<p><img src="Two%20vs%20One-Sided%20Confidence%20Intervals.jpg" /></p>
+</div>
+<div id="variance-estimation" class="section level4" number="8.2.2.4">
+<h4><span class="header-section-number">8.2.2.4</span> Variance
+Estimation</h4>
+<p><img src="Variance%20Estimation.jpg" /></p>
+</div>
+</div>
+<div id="hypothesis-testing" class="section level3" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Hypothesis
+Testing</h3>
+<p><img src="Decision%20Table.jpg" /></p>
+<p><img src="Type%20I%20and%20Type%20II%20Error.jpg" /></p>
+<p>How to Conduct Hypothesis Testing 1. State the question of interest!
+2. Specify the parameter of interest; set up the null/alternative
+hypotheses and the significance level; 3. Clearly state the statistical
+methodology to be used and assumptions - why?; 4. Collect the data; 5.
+State the test statistic and determine the critical values/region; 6.
+Interpret the findings in the context of the question/problem; 7. Draw
+conclusions and compare the results to other findings (if
+available).</p>
+<ol style="list-style-type: decimal">
+<li>说明感兴趣的问题！</li>
+<li>指定感兴趣的参数；设定零假设/备择假设和显著性水平；</li>
+<li>明确说明要使用的统计方法和假设–为什么？</li>
+<li><ol start="4" style="list-style-type: decimal">
+<li>收集数据；</li>
+</ol></li>
+<li>说明检验统计量并确定临界值/区域；</li>
+<li>根据问题的背景解释结果；</li>
+<li>得出结论，并将结果与其他结果（如有）进行比较。</li>
+</ol>
+<div id="one-sample-1-sided-tests-单样本单侧检验" class="section level4"
+number="8.2.3.1">
+<h4><span class="header-section-number">8.2.3.1</span> One-Sample,
+1-sided Tests 单样本单侧检验</h4>
+<p>Known Variance 已知标准差</p>
+<p><img src="One-Sample,%201-sided%20Tests.jpg" /></p>
+<p><img src="One-Sample,%201-sided%20Tests1.jpg" /></p>
+<p>Unknown Variance 未知标准差</p>
+<p><img src="One-Sample,%201-sided%20Tests2.jpg" /></p>
+</div>
+<div id="one-sample-2-sided-tests-单样本双侧检验" class="section level4"
+number="8.2.3.2">
+<h4><span class="header-section-number">8.2.3.2</span> One-Sample,
+2-sided Tests 单样本双侧检验</h4>
+<p>Known Variance 已知标准差</p>
+<p><img src="One-Sample,%202-sided%20Tests.jpg" /></p>
+<p>Unknown Variance 未知标准差</p>
+<p><img src="One-Sample,%202-sided%20Tests2.jpg" /></p>
+</div>
+</div>
+<div id="prediction" class="section level3" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Prediction</h3>
+</div>
+</div>
+<div id="r-code-1" class="section level2 tabset" number="8.3">
+<h2 class="tabset"><span class="header-section-number">8.3</span> R
+code</h2>
+<div id="sample-mean-distributions-clt" class="section level3"
+number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Sample Mean
+Distributions: CLT</h3>
+<p>Draw 1000 (N) samples of size 10 (n) from an underlying exponential
+distribution with parameter lambda = 0.3. 从参数为 lambda = 0.3
+的指数分布中抽取 1000 (N) 个大小为 10 (n) 的样本</p>
+<pre class="r"><code>#  define parameters 定义参数
+n = 10
+N = 1000
+lambda = 0.3
+set.seed(2)
+
+# create vector of sample means 创建样本均值向量
+sample_means_exp1 = c()
+for(i in 1:N){
+sample_means_exp1[i] = mean(rexp(n, lambda))
+}</code></pre>
+<p>Calculate their means and variances and draw a histogram to vizualize
+the sample mean distribution.
+计算它们的均值和方差，并绘制直方图以显示样本均值分布。</p>
+<pre class="r"><code>mean(sample_means_exp1)</code></pre>
+<pre><code>## [1] 3.360129</code></pre>
+<pre class="r"><code>var(sample_means_exp1)</code></pre>
+<pre><code>## [1] 1.261384</code></pre>
+<pre class="r"><code>hist(sample_means_exp1,
+main = &quot;Samples of Size n = 10 from Exp(0.3)&quot;,
+xlab = &quot;Sample Means&quot;, prob = T)
+lines(density(sample_means_exp1), col = &quot;darkblue&quot;, lwd = 2)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Draw 1000 (N) samples of size 50 (n) from an underlying exponential
+distribution with parameter lambda = 0.3. 从参数 lambda = 0.3
+的指数分布中抽取 1000 (N) 个大小为 50 (n) 的样本。</p>
+<pre class="r"><code># define parameters
+n = 50
+N = 1000
+lambda = 0.3
+set.seed(2)
+
+# create vector of sample means
+sample_means_exp1 = c()
+for(i in 1:N){
+sample_means_exp1[i] = mean(rexp(n, lambda))
+}</code></pre>
+<p>Calculate their means and variances and draw a histogram to vizualize
+the sample mean distribution.</p>
+<pre class="r"><code>mean(sample_means_exp1)</code></pre>
+<pre><code>## [1] 3.330665</code></pre>
+<pre class="r"><code>var(sample_means_exp1)</code></pre>
+<pre><code>## [1] 0.2316242</code></pre>
+<pre class="r"><code>hist(sample_means_exp1,
+main = &quot;Samples of Size n = 50 from Exp(0.3)&quot;,
+xlab = &quot;Sample Means&quot;, prob = T)
+lines(density(sample_means_exp1), col = &quot;darkblue&quot;, lwd = 2)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="confidence-intervals" class="section level3" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Confidence
+Intervals</h3>
+<p>Construct a 95% CI for the population mean with 𝑛 = 10, 𝑋 = 175, and
+known (population) 𝜎 = 15. 在𝑛 = 10、𝑋 = 175 和已知（人口）𝜎 = 15
+的条件下，构建人口平均值的 95% CI。</p>
+<pre class="r"><code>lower = 175 - qnorm(0.975) * 15/sqrt(10)
+upper = 175 + qnorm(0.975) * 15/sqrt(10)
+c(lower, upper)</code></pre>
+<pre><code>## [1] 165.7031 184.2969</code></pre>
+<p>Construct a 99% CI for the population mean with 𝑛 = 10, 𝑋 = 175, and
+known (population) 𝜎 = 15.</p>
+<pre class="r"><code>lower = 175 - qnorm(0.995) * 15/sqrt(10)
+upper = 175 + qnorm(0.995) * 15/sqrt(10)
+c(lower, upper)</code></pre>
+<pre><code>## [1] 162.7818 187.2182</code></pre>
+<p>Construct a 95% CI for the population mean with 𝑛 = 10, 𝑋 = 175, 𝑑𝑓 =
+10 - 1 = 9 and known (sample) 𝑠 = 15.</p>
+<pre class="r"><code>lower = 175 - qt(0.975, df = 9) * 15/sqrt(10)
+upper = 175 + qt(0.975, df = 9) * 15/sqrt(10)
+c(lower, upper)</code></pre>
+<pre><code>## [1] 164.2696 185.7304</code></pre>
+<p>Construct a 95% CI for the population variance with known s = 15.</p>
+<pre class="r"><code>lower = 9*(15^2) / qchisq(0.975, 9)
+upper = 9*(15^2) / qchisq(0.025, 9)
+c(lower, upper)</code></pre>
+<pre><code>## [1] 106.4514 749.8918</code></pre>
+</div>
+<div id="hypothesis-testing-1" class="section level3" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Hypothesis
+Testing</h3>
+<p>Calculate the test statistic for testing if the population mean is
+different from 25 given 𝑋 = 16, 𝑠 = 10, and 𝑛 = 40. Compare to the
+critical value and calculate the p-value at the 0.05 level. 给定 𝑋 =
+16，𝑠 = 10，𝑛 = 40，计算检验人口平均值是否不同于 25
+的检验统计量。比较临界值，计算 0.05 水平的 p 值。</p>
+<pre class="r"><code># test statistic
+tstat = (16 - 25) / (10/sqrt(40))
+# critical value
+cv = qt(0.975, df = 40 - 1)
+# p-value
+pv = 2 * pt(tstat, df = 39)
+# decision
+ifelse(abs(tstat) &gt; cv, &quot;reject&quot;, &quot;fail to reject&quot;)</code></pre>
+<pre><code>## [1] &quot;reject&quot;</code></pre>
+<pre class="r"><code>ifelse(pv &lt; 0.05, &quot;reject&quot;, &quot;fail to reject&quot;)</code></pre>
+<pre><code>## [1] &quot;reject&quot;</code></pre>
+<p>Using the “lowbwt_ALL.csv” data, test if the true mean bwt is
+different than 3000g.</p>
+<pre class="r"><code># load data
+lowbwt = read.csv(&quot;Module 7/lowbwt_ALL.csv&quot;)
+# one-sample, two-tailed t-test
+t.test(lowbwt$bwt, alternative = &#39;two.sided&#39;, mu = 3000) # fail to reject</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  lowbwt$bwt
+## t = -1.0437, df = 188, p-value = 0.298
+## alternative hypothesis: true mean is not equal to 3000
+## 95 percent confidence interval:
+##  2840.049 3049.264
+## sample estimates:
+## mean of x 
+##  2944.656</code></pre>
+<p>Test if the true mean is less than 3000g.</p>
+<pre class="r"><code># one-sample, one-tailed t-test
+t.test(lowbwt$bwt, alternative = &#39;less&#39;, mu = 3000) # fail to reject</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  lowbwt$bwt
+## t = -1.0437, df = 188, p-value = 0.149
+## alternative hypothesis: true mean is less than 3000
+## 95 percent confidence interval:
+##      -Inf 3032.312
+## sample estimates:
+## mean of x 
+##  2944.656</code></pre>
+</div>
+</div>
+</div>
+<div id="module-8" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Module 8</h1>
+</div>
+<div id="module-9" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Module 9</h1>
+</div>
+<div id="module-10" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> Module 10</h1>
+</div>
+<div id="module-11" class="section level1" number="12">
+<h1><span class="header-section-number">12</span> Module 11</h1>
+</div>
+<div id="module-12" class="section level1" number="13">
+<h1><span class="header-section-number">13</span> Module 12</h1>
 </div>
 
 
