@@ -663,7 +663,16 @@ Test if the true mean is less than 3000g.
 t.test(lowbwt$bwt, alternative = 'less', mu = 3000) # fail to reject
 ```
 
-# Module 8
+# Methods of Inference: Two-Sample Means 推断方法：两样本均数{.tabset}
+
+## Two-Sided Paired t-test
+
+![](Two-Sided Paired t-test.jpg)
+
+Confidence Interval for Δ
+
+![](Confidence Interval for Δ.jpg)
+
 
 
 
